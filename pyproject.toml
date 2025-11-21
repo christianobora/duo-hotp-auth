@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "duo-hotp-auth"
+version = "0.1.0"
+description = "Duo Mobile HOTP code generator based on Duo activation links"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Christian Obora"},
+]
+keywords = ["duo", "hotp", "otp", "two-factor", "2fa", "authentication"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "requests>=2.28.0",
+    "cryptography>=41.0.0",
+    "platformdirs>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.scripts]
+duo-hotp = "duo_hotp_auth.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/christianobora/duo-hotp-auth"
+Documentation = "https://github.com/christianobora/duo-hotp-auth#readme"
+Repository = "https://github.com/christianobora/duo-hotp-auth"
+Issues = "https://github.com/christianobora/duo-hotp-auth/issues"
+
+[tool.hatchling.build.targets.wheel]
+packages = ["src/duo_hotp_auth"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
