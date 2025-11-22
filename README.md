@@ -1,3 +1,5 @@
+For hands-free login on Chrome-enabled devices, see: https://github.com/cvltist/uchicago-auto-auth
+
 # duo-hotp-auth
 
 Duo Mobile HOTP code generator based on Duo activation links.
