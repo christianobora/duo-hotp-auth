@@ -1,5 +1,3 @@
-For hands-free login on Chrome-enabled devices, see: https://github.com/cvltist/uchicago-auto-auth
-
 # duo-hotp-auth
 
 Duo Mobile HOTP code generator based on Duo activation links.
@@ -38,6 +36,10 @@ Before you can activate a device, you need to obtain the Duo activation code or 
 4. **Use the copied URL** with the activation command (see Usage below)
 
 **Alternative**: If you can see the raw activation code (a string like `test123...-YXBp...`), you can use that directly instead of the QR URL.
+
+### Optional: Hands-Free Duo Login (Chrome)
+> [!IMPORTANT]
+> For hands-free login on Chrome-enabled devices, see: https://github.com/cvltist/uchicago-auto-auth
 
 ## Usage
 
